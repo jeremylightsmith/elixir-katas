@@ -1,13 +1,17 @@
+#https://www.codewars.com/kata/59c633e7dcc4053512000073/train/elixir
 defmodule ConsonantValue do
   def solve(s) do
-    words = String.split(s, ~r{[aeiou]})
-    words
-    |> Enum.map(score)
+    s
+    |> String.split(~r{[aeiou]}) # words
+    |> Enum.map(&word_score/1) # word scores
     |> Enum.max
   end
 
-  def score(word) do
-    
+  def word_score(word) do
+    word
+    |> String.graphemes
+    |> Enum.map(fn c -> (c |> String.to_charlist |> hd) - ?a + 1 end)
+    |> Enum.sum
   end
 end
 
