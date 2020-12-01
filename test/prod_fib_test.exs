@@ -14,8 +14,6 @@ defmodule ProdFib do
   #  end
 end
 
-ExUnit.start
-
 defmodule ProdFibTest do
   use ExUnit.Case
 

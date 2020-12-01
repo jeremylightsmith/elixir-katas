@@ -10,8 +10,6 @@ defmodule ParityOutlier do
   end
 end
 
-ExUnit.start()
-
 defmodule ParityOutlierTest do
   use ExUnit.Case
 

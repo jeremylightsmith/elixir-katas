@@ -1,4 +1,4 @@
-defmodule Braces do
+defmodule Katas.Braces do
   @moduledoc false
 
   def open?(char) do
@@ -43,25 +43,6 @@ defmodule Braces do
                             end
                           )
     success && Enum.empty?(stack)
-  end
-end
-
-ExUnit.start()
-
-defmodule BracesTest do
-  use ExUnit.Case
-
-  test "greets the world" do
-    assert Braces.valid_braces("()") == true
-    assert Braces.valid_braces("(") == false
-    assert Braces.valid_braces("({})") == true
-    assert Braces.valid_braces("({)") == false
-
-    assert Braces.valid_braces("(){}[]") == true
-    assert Braces.valid_braces("([{}])") == true
-    assert Braces.valid_braces("(}") == false
-    assert Braces.valid_braces("[(])") == false
-    assert Braces.valid_braces("[({})](]") == false
   end
 end
 

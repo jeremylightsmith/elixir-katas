@@ -18,9 +18,7 @@ defmodule Buycar do
   end
 end
 
-ExUnit.start
-
-defmodule BuycarTest do
+defmodule BuyCarTest do
   use ExUnit.Case
 
   defp testing(_, old_car_start_price, new_car_start_price, savings_per_month, percent_loss_by_month, answer) do
